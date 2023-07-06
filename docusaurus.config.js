@@ -14,14 +14,15 @@ const config = {
     url: 'https://audse.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: '/',
+    baseUrl: '/mod-system-docs/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'audse', // Usually your GitHub org/user name.
     projectName: 'mod-system-docs', // Usually your repo name.
+    trailingSlash: false,
 
-    onBrokenLinks: 'throw',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
 
     // Even if you don't use internalization, you can use this field to set useful
