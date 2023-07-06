@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Mod System Docs',
-    tagline: 'Mod System addon for Godot 4 documentation',
+    title: 'Mod System Documentation',
+    tagline: 'Documentation for the Godot 4 Mod System Addon',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
@@ -64,7 +64,6 @@ const config = {
                 // },
                 items: [
                     { to: '/docs/overview', label: 'Docs', position: 'left' },
-                    { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/audse/mod-system-docs',
                         label: 'GitHub',
