@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/resources/mod",
+  "id": "api/resources/mod",
+  "title": "Mod",
+  "description": "See the code at mod.gd",
+  "source": "@site/docs/api/resources/mod.md",
+  "sourceDirName": "api/resources",
+  "slug": "/api/resources/mod",
+  "permalink": "/docs/api/resources/mod",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/docs/category/resources"
+  },
+  "next": {
+    "title": "ModAsset",
+    "permalink": "/docs/api/resources/mod_asset"
+  }
+}

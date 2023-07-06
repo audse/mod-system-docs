@@ -1,0 +1,19 @@
+{
+  "unversionedId": "API Reference/singletons/mod-loader",
+  "id": "API Reference/singletons/mod-loader",
+  "title": "mod-loader",
+  "description": "",
+  "source": "@site/docs/API Reference/singletons/mod-loader.md",
+  "sourceDirName": "API Reference/singletons",
+  "slug": "/API Reference/singletons/mod-loader",
+  "permalink": "/docs/API Reference/singletons/mod-loader",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/tutorial-extras/translate-your-site"
+  }
+}

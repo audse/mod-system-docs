@@ -1,0 +1,15 @@
+{
+  "title": "API Reference",
+  "slug": "/category/api-reference",
+  "permalink": "/docs/category/api-reference",
+  "navigation": {
+    "previous": {
+      "title": "Mod System Overview",
+      "permalink": "/docs/overview"
+    },
+    "next": {
+      "title": "Resources",
+      "permalink": "/docs/category/resources"
+    }
+  }
+}

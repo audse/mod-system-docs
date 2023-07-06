@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/singletons/mod-class-db",
+  "id": "api/singletons/mod-class-db",
+  "title": "ModClassDB",
+  "description": "A database of extensible classes",
+  "source": "@site/docs/api/singletons/mod-class-db.md",
+  "sourceDirName": "api/singletons",
+  "slug": "/api/singletons/mod-class-db",
+  "permalink": "/docs/api/singletons/mod-class-db",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Singletons",
+    "permalink": "/docs/category/singletons"
+  },
+  "next": {
+    "title": "ModLoader",
+    "permalink": "/docs/api/singletons/mod-loader"
+  }
+}

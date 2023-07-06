@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/singletons/mod-loader",
+  "id": "api/singletons/mod-loader",
+  "title": "ModLoader",
+  "description": "Mod discovery and loading",
+  "source": "@site/docs/api/singletons/mod-loader.md",
+  "sourceDirName": "api/singletons",
+  "slug": "/api/singletons/mod-loader",
+  "permalink": "/docs/api/singletons/mod-loader",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ModClassDB",
+    "permalink": "/docs/api/singletons/mod-class-db"
+  },
+  "next": {
+    "title": "ModSystem",
+    "permalink": "/docs/api/singletons/mod-system"
+  }
+}

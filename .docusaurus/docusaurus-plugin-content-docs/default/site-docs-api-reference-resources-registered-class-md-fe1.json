@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api-reference/resources/registered-class",
+  "id": "api-reference/resources/registered-class",
+  "title": "registered-class",
+  "description": "",
+  "source": "@site/docs/api-reference/resources/registered-class.md",
+  "sourceDirName": "api-reference/resources",
+  "slug": "/api-reference/resources/registered-class",
+  "permalink": "/docs/api-reference/resources/registered-class",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Mod",
+    "permalink": "/docs/api-reference/resources/mod"
+  },
+  "next": {
+    "title": "Singletons",
+    "permalink": "/docs/category/singletons"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "api/singletons/mod-system",
+  "id": "api/singletons/mod-system",
+  "title": "ModSystem",
+  "description": "A manager for installed mods",
+  "source": "@site/docs/api/singletons/mod-system.md",
+  "sourceDirName": "api/singletons",
+  "slug": "/api/singletons/mod-system",
+  "permalink": "/docs/api/singletons/mod-system",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ModLoader",
+    "permalink": "/docs/api/singletons/mod-loader"
+  }
+}
