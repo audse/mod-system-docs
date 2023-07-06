@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmod_system_docs=self.webpackChunkmod_system_docs||[]).push([[3578],{1776:s=>{s.exports=JSON.parse('{"label":"hola","permalink":"/mod-system-docs/blog/tags/hola","allTagsPath":"/mod-system-docs/blog/tags","count":1}')}}]);
