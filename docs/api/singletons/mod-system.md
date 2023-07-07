@@ -1,12 +1,15 @@
+---
+description: 'A manager for installed mods'
+---
+import { SourceLink, GodotClassLink, Property, Class, Params } from '/src/components'
+
 # ModSystem
 
-<h3>A manager for installed mods</h3>
-
-[**See the code at `mod_system.gd`**](https://github.com/audse/mod-system/tree/main/addons/mod_system/autoload/mod_system.gd)
+<SourceLink script='autoload/mod_system.gd' />
 
 ## Description
 
-**Inherits `Node`**
+**Inherits <GodotClassLink cls='Node' />**
 
 The `ModSystem` class is a singleton that handles the management of mods within the game. It provides methods for installing, enabling, disabling, granting, and revoking mods. The `ModSystem` is responsible for maintaining the state of mods and their instances, as well as facilitating communication between mods and the game objects they affect.
 
@@ -15,7 +18,6 @@ The `ModSystem` class is a singleton that handles the management of mods within 
 ## Signals
 
 ### mod_installed
-
 ```gdscript
 signal mod_installed(mod: Mod)
 ```
@@ -24,14 +26,15 @@ This signal is emitted when a mod is installed with the Mod System.
 
 **Parameters**
 
-| Name  | Type                             | Description        |
-| :---- | :------------------------------- | :----------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The installed mod. |
+<Params>
+    <Params.Row name='mod'
+        description='The installed mod.'
+        type={ <Class.Mod /> } />
+</Params>
 
 ***
 
 ### mod_uninstalled
-
 ```gdscript
 signal mod_uninstalled(mod: Mod)
 ```
@@ -40,14 +43,15 @@ This signal is emitted when a mod is uninstalled from the Mod System.
 
 **Parameters**
 
-| Name  | Type                             | Description          |
-| :---- | :------------------------------- | :------------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The uninstalled mod. |
+<Params>
+    <Params.Row name='mod'
+        description='The uninstalled mod.'
+        type={ <Class.Mod /> } />
+</Params>
 
 ***
 
 ### mod_enabled
-
 ```gdscript
 signal mod_enabled(mod: Mod)
 ```
@@ -56,14 +60,15 @@ This signal is emitted when a mod is enabled.
 
 **Parameters**
 
-| Name  | Type                             | Description      |
-| :---- | :------------------------------- | :--------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The enabled mod. |
+<Params>
+    <Params.Row name='mod'
+        description='The enabled mod.'
+        type={ <Class.Mod /> } />
+</Params>
 
 ***
 
 ### mod_disabled
-
 ```gdscript
 signal mod_disabled(mod: Mod)
 ```
@@ -72,14 +77,15 @@ This signal is emitted when a mod is disabled.
 
 **Parameters**
 
-| Name  | Type                             | Description       |
-| :---- | :------------------------------- | :---------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The disabled mod. |
+<Params>
+    <Params.Row name='mod'
+        description='The disabled mod.'
+        type={ <Class.Mod /> } />
+</Params>
 
 ***
 
 ### mod_granted
-
 ```gdscript
 signal mod_granted(instance: ModInstance)
 ```
@@ -88,14 +94,15 @@ This signal is emitted when a mod is granted to an object.
 
 **Parameters**
 
-| Name       | Type                                             | Description               |
-| :--------- | :----------------------------------------------- | :------------------------ |
-| `instance` | [`ModInstance`](/docs/api/resources/ModInstance) | The granted mod instance. |
+<Params>
+    <Params.Row name='instance'
+        description='The granted mod instance.'
+        type={ <Class.ModInstance /> } />
+</Params>
 
 ***
 
 ### mod_revoked
-
 ```gdscript
 signal mod_revoked(instance: ModInstance)
 ```
@@ -104,59 +111,66 @@ This signal is emitted when a mod is revoked from an object.
 
 **Parameters**
 
-| Name       | Type                                             | Description               |
-| :--------- | :----------------------------------------------- | :------------------------ |
-| `instance` | [`ModInstance`](/docs/api/resources/ModInstance) | The revoked mod instance. |
+<Params>
+    <Params.Row name='instance'
+        description='The revoked mod instance.'
+        type={ <Class.ModInstance /> } />
+</Params>
 
 ***
 
 ## Properties
 
 ### installed_mods
-
 ```gdscript
 var installed_mods: Array[Mod]
 ```
 
 An array that holds the installed mods.
 
-**Type**
-
-`Array`[[`Mod`](Mod)]
+<Property>
+    <Property.Type>
+        <code>Array</code>[<Class.Mod />]
+    </Property.Type>
+    <Property.Default><code>[]</code></Property.Default>
+</Property>
 
 ***
 
 ### settings
-
 ```gdscript
 var settings: ModSettings
 ```
 
-An instance of the [`ModSettings`](/docs/api/resources/Modsettings) class, stores the user's configuration settings for the Mod System.
+An instance of the <Class.ModSettings /> class, stores the user's configuration settings for the Mod System.
 
-**Type**
+**Note**: This is automatically loaded (or created, if none are found) on game start.
 
-[`ModSettings`](/docs/api/resources/ModSettings)
+<Property>
+    <Property.Type><Class.ModSettings /></Property.Type>
+    <Property.Default>Loaded instance of <Class.ModSettings /></Property.Default>
+</Property>
 
 ***
 
 ## Methods
 
 ### initialize
-
 ```gdscript
 func initialize(mod_owner: Object) -> void
 ```
 
 Initializes the Mod System for accepting mods in the specified `mod_owner` object.
 
-This method registers the `mod_owner` object with the `ModClassDB` and grants all possible mods to the object.
+This method registers the `mod_owner` object with the <Class.ModClassDB /> and grants all possible mods to the object.
 
 **Parameters**
 
-| Name        | Type     | Description                        |
-| :---------- | :------- | :--------------------------------- |
-| `mod_owner` | `Object` | The object to initialize for mods. |
+<Params>
+    <Params.Row name='mod_owner'
+        description='The object to initialize for mods.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
@@ -165,20 +179,21 @@ This method registers the `mod_owner` object with the `ModClassDB` and grants al
 ***
 
 ### install
-
 ```gdscript
 func install(mod: Mod) -> void
 ```
 
 Installs a mod to the Mod System.
 
-This method adds the specified mod to the `installed_mods` array. The `mod_installed` signal is emitted after successful registration.
+This method adds the specified mod to the [`installed_mods`](#installed_mods) array. The [`mod_installed`](#mod_installed) signal is emitted after successful registration.
 
 **Parameters**
 
-| Name  | Type                             | Description         |
-| :---- | :------------------------------- | :------------------ |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The mod to install. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to install.'
+        type={ <Class.Mod /> } />
+</Params>
 
 **Returns**
 
@@ -187,20 +202,21 @@ This method adds the specified mod to the `installed_mods` array. The `mod_insta
 ***
 
 ### uninstall
-
 ```gdscript
 func uninstall(mod: Mod) -> void
 ```
 
 Uninstalls a mod from the Mod System.
 
-This method removes the specified mod from the `installed_mods` array. The `mod_uninstalled` signal is emitted after successful unregistration.
+This method removes the specified mod from the [`installed_mods`](#installed_mods) array. The [`mod_uninstalled`](#mod_uninstalled) signal is emitted after successful unregistration.
 
 **Parameters**
 
-| Name  | Type                             | Description           |
-| :---- | :------------------------------- | :-------------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The mod to uninstall. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to uninstall.'
+        type={ <Class.Mod /> } />
+</Params>
 
 **Returns**
 
@@ -209,20 +225,21 @@ This method removes the specified mod from the `installed_mods` array. The `mod_
 ***
 
 ### enable
-
 ```gdscript
 func enable(mod: Mod) -> void
 ```
 
 Enables a mod.
 
-This method enables the specified mod and emits the `mod_enabled` signal.
+This method enables the specified mod and emits the [`mod_enabled`](#mod_enabled) signal.
 
 **Parameters**
 
-| Name  | Type                             | Description        |
-| :---- | :------------------------------- | :----------------- |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The mod to enable. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to enable.'
+        type={ <Class.Mod /> } />
+</Params>
 
 **Returns**
 
@@ -231,20 +248,21 @@ This method enables the specified mod and emits the `mod_enabled` signal.
 ***
 
 ### disable
-
 ```gdscript
 func disable(mod: Mod) -> void
 ```
 
 Disables a mod.
 
-This method disables the specified mod and emits the `mod_disabled` signal.
+This method disables the specified mod and emits the [`mod_disabled`](#mod_disabled) signal.
 
 **Parameters**
 
-| Name  | Type                             | Description         |
-| :---- | :------------------------------- | :------------------ |
-| `mod` | [`Mod`](/docs/api/resources/Mod) | The mod to disable. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to disable.'
+        type={ <Class.Mod /> } />
+</Params>
 
 **Returns**
 
@@ -253,14 +271,13 @@ This method disables the specified mod and emits the `mod_disabled` signal.
 ***
 
 ### enable_all
-
 ```gdscript
 func enable_all() -> void
 ```
 
 Enables all installed mods.
 
-This method enables all mods in the `installed_mods` array and emits the `mod_enabled` signal for each enabled mod.
+This method enables all mods in the [`installed_mods`](#installed_mods) array and emits the [`mod_enabled`](#mod_enabled) signal for each enabled mod.
 
 **Returns**
 
@@ -269,14 +286,13 @@ This method enables all mods in the `installed_mods` array and emits the `mod_en
 ***
 
 ### disable_all
-
 ```gdscript
 func disable_all() -> void
 ```
 
 Disables all installed mods.
 
-This method disables all mods in the `installed_mods` array and emits the `mod_disabled` signal for each disabled mod.
+This method disables all mods in the [`installed_mods`](#installed_mods) array and emits the [`mod_disabled`](#mod_disabled) signal for each disabled mod.
 
 **Returns**
 
@@ -285,7 +301,6 @@ This method disables all mods in the `installed_mods` array and emits the `mod_d
 ***
 
 ### grant
-
 ```gdscript
 func grant(mod: Mod, mod_owner: Object) -> void
 ```
@@ -296,10 +311,14 @@ This method grants the specified mod to the specified mod_owner object and emits
 
 **Parameters**
 
-| Name        | Type                             | Description                     |
-| :---------- | :------------------------------- | :------------------------------ |
-| `mod`       | [`Mod`](/docs/api/resources/Mod) | The mod to grant.               |
-| `mod_owner` | `Object`                         | The object to grant the mod to. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to grant.'
+        type={ <Class.Mod /> } />
+    <Params.Row name='mod_owner'
+        description='The object in which to grant the mod.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
@@ -308,7 +327,6 @@ This method grants the specified mod to the specified mod_owner object and emits
 ***
 
 ### grant_all
-
 ```gdscript
 func grant_all(mod_owner: Object) -> void
 ```
@@ -319,9 +337,11 @@ This method grants all possible mods to the specified mod_owner object and emits
 
 **Parameters**
 
-| Name        | Type     | Description                      |
-| :---------- | :------- | :------------------------------- |
-| `mod_owner` | `Object` | The object to grant the mods to. |
+<Params>
+    <Params.Row name='mod_owner'
+        description='The object in which to grant the mods.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
@@ -330,7 +350,6 @@ This method grants all possible mods to the specified mod_owner object and emits
 ***
 
 ### revoke
-
 ```gdscript
 func revoke(mod: Mod, mod_owner: Object) -> void
 ```
@@ -341,10 +360,14 @@ This method revokes the specified mod from the specified mod_owner object and em
 
 **Parameters**
 
-| Name        | Type                             | Description                        |
-| :---------- | :------------------------------- | :--------------------------------- |
-| `mod`       | [`Mod`](/docs/api/resources/Mod) | The mod to revoke.                 |
-| `mod_owner` | `Object`                         | The object to revoke the mod from. |
+<Params>
+    <Params.Row name='mod'
+        description='The mod to revoke.'
+        type={ <Class.Mod /> } />
+    <Params.Row name='mod_owner'
+        description='The object from which to revoke the mod.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
@@ -353,7 +376,6 @@ This method revokes the specified mod from the specified mod_owner object and em
 ***
 
 ### revoke_all
-
 ```gdscript
 func revoke_all(mod_owner: Object) -> void
 ```
@@ -364,9 +386,11 @@ This method revokes all possible mods from the specified mod_owner object and em
 
 **Parameters**
 
-| Name        | Type     | Description                         |
-| :---------- | :------- | :---------------------------------- |
-| `mod_owner` | `Object` | The object to revoke the mods from. |
+<Params>
+    <Params.Row name='mod_owner'
+        description='The object from which to revoke the mods.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
@@ -375,7 +399,6 @@ This method revokes all possible mods from the specified mod_owner object and em
 ***
 
 ### get_grantable_mods
-
 ```gdscript
 func get_grantable_mods(mod_owner: Object) -> Array[Mod]
 ```
@@ -386,36 +409,41 @@ This method searches the `installed_mods` array and returns all mods where the `
 
 **Parameters**
 
-| Name        | Type     | Description                                |
-| :---------- | :------- | :----------------------------------------- |
-| `mod_owner` | `Object` | The object to retrieve grantable mods for. |
+<Params>
+    <Params.Row name='mod_owner'
+        description='The object for which to retrieve grantable mods.'
+        type={ <GodotClassLink cls='Object' /> } />
+</Params>
 
 **Returns**
 
-| Type                  | Description                 |
-| :-------------------- | :-------------------------- |
-| `Array`[[`Mod`](Mod)] | An array of grantable mods. |
+<Property>
+    <Property.Type><code>Array</code>[<Class.Mod />]</Property.Type>
+    <Property.Description>An array of grantable mods.</Property.Description>
+</Property>
 
 ***
 
 ### get_mod_by_id
-
 ```gdscript
 func get_mod_by_id(id: String) -> Mod
 ```
 
 Retrieves a mod by its ID.
 
-This method searches the `installed_mods` array and returns the mod with the matching ID.
+This method searches the [`installed_mods`](#installed_mods) array and returns the mod with the matching ID (see <Class.Mod method='get_identifier' />).
 
 **Parameters**
 
-| Name | Type     | Description                    |
-| :--- | :------- | :----------------------------- |
-| `id` | `String` | The ID of the mod to retrieve. |
+<Params>
+    <Params.Row name='id'
+        description='The ID of the mod to retrieve.'
+        type={ <GodotClassLink cls='String' /> } />
+</Params>
 
 **Returns**
 
-| Type                             | Description                    |
-| :------------------------------- | :----------------------------- |
-| [`Mod`](/docs/api/resources/Mod) | The mod with the specified ID. |
+<Property>
+    <Property.Type><Class.Mod /></Property.Type>
+    <Property.Description>The mod with the specified ID.</Property.Description>
+</Property>

@@ -1,27 +1,29 @@
+---
+description: 'Mod discovery and loading'
+---
+import { SourceLink, GodotClassLink, Property, Class, Params } from '/src/components'
+
 # ModLoader
 
-<h3>Mod discovery and loading</h3>
-
-[**See the code at `mod_loader.gd`**](https://github.com/audse/mod-system/tree/main/addons/mod_system/autoload/mod_loader.gd)
+<SourceLink.SeeTheCode script='autoload/mod_loader.gd' />
 
 ## Description
 
-**Inherits `Node`**
+**Inherits <GodotClassLink cls='Node' />**
 
 The `ModLoader` class is a singleton responsible for loading mods. Upon game start, this class:
 
-1. Recursively searches for mod files (`.mod.tres` or `.mod.json` files) within the directories specified in the `ProjectSettings."mod_system/mod_paths"` property
+1. Recursively searches for mod files (`*.mod.tres` or `*.mod.json` files) within the directories specified in the `ProjectSettings."mod_system/mod_paths"` property
 2. Loads the mods it found
-3. Communicates with [`ModSystem`](ModSystem) to install them using the [`ModSystem.install`](ModSystem#install) method.
+3. Communicates with <Class.ModSystem /> to install them using the <Class.ModSystem method='install' /> method.
 
-The `ModLoader` class is designed to work in conjunction with the [`ModSystem`](ModSystem) class, which manages the overall functionality and behavior of mods in the game.
+The `ModLoader` class is designed to work in conjunction with the  <Class.ModSystem /> class, which manages the overall functionality and behavior of mods in the game.
 
 ***
 
 ## Signals
 
 ### finished_loading
-
 ```gdscript
 signal finished_loading
 ```
@@ -33,56 +35,59 @@ This signal is emitted when all mods have been loaded and installed.
 ## Properties
 
 ### is_finished_loading
-
 ```gdscript
 var is_finished_loading: bool
 ```
 
 If `true`, all mods have been loaded and installed.
 
-**Type**
-
-`bool`
-
+<Property>
+    <Property.Type><code>bool</code></Property.Type>
+    <Property.Default><code>false</code></Property.Default>
+</Property>
 
 ***
 
 ## Methods
 
 ### load_all_mods
-
 ```gdscript
 func load_all_mods() -> void
 ```
 
-Recursively finds all mod paths that end with `.mod.tres` or `.mod.json`, loads them, and installs them using the [`ModSystem.install`](ModSystem#install) method.
+Recursively finds all mod paths that end with `.mod.tres`, `.mod.res`, or `.mod.json`, loads them, and installs them using the <Class.ModSystem method='install' /> method.
+
+**Returns**
+
+`void`
 
 ***
 
 ### load_mod
-
 ```gdscript
 func load_mod(path: String) -> Mod
 ```
 
-Loads a mod at the specified `path` and installs it using the [`ModSystem.install`](ModSystem#install) method.
+Loads a mod at the specified `path` and installs it using the <Class.ModSystem method='install' /> method.
 
 **Parameters**
 
-| Name   | Type     | Description                       |
-| ------ | -------- | --------------------------------- |
-| `path` | `String` | The file path of the mod to load. |
+<Params>
+    <Params.Row name='path'
+        description='The file path of the mod to load.'
+        type={ <code>String</code>} />
+</Params>
 
 **Returns**
 
-| Type                                       | Description     |
-| ------------------------------------------ | --------------- |
-| [`Mod`](/docs/api/resources/Mod) or `null` | The loaded mod. |
+<Property>
+    <Property.Type><Class.Mod /> or <code>null</code></Property.Type>
+    <Property.Description>The loaded mod.</Property.Description>
+</Property>
 
 ***
 
 ### discover_mod_paths
-
 ```gdscript
 func discover_mod_paths(dirs: Array[String]) -> Array[String]
 ```
@@ -91,12 +96,15 @@ Recursively searches each listed directory for mods and returns a list of all pa
 
 **Parameters**
 
-| Name   | Type              | Description                         |
-| ------ | ----------------- | ----------------------------------- |
-| `dirs` | `Array`[`String`] | The directories to search for mods. |
+<Params>
+    <Params.Row name='dirs'
+        description='The directories to search for mod paths.'
+        type={ <code>Array[String]</code>} />
+</Params>
 
 **Returns**
 
-| Type              | Description                                                       |
-| ----------------- | ----------------------------------------------------------------- |
-| `Array`[`String`] | Returns all paths to mods within the listed `dirs` (recursively). |
+<Property>
+    <Property.Type><code>Array[String]</code></Property.Type>
+    <Property.Description>All paths to mods within the listed `dirs` (recursive).</Property.Description>
+</Property>

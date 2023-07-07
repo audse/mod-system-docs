@@ -1,12 +1,17 @@
+---
+description: 'Stores metadata, assets, and scripts'
+---
+import { SourceLink, GodotClassLink, Property, Class, Params } from '/src/components'
+
 # Mod
 
-[**See the code at `mod.gd`**](https://github.com/audse/mod-system/tree/main/addons/mod_system/resources/mod.gd)
+<SourceLink.SeeTheCode script='resources/mod.gd' />
 
 ## Description
 
 **Inherits `Resource`**
 
-The `Mod` class represents a mod in ModSystem. It extends the `Resource` class and provides metadata, assets, and functionality for granting and revoking the mod to/from game objects.
+The `Mod` class represents a mod in the Mod System. It extends the `Resource` class and provides metadata, assets, and functionality for granting and revoking the mod to/from game objects.
 
 ***
 
