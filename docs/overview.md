@@ -92,4 +92,5 @@ This is just a quick overview on how to create a mod. For more detail, check out
    2. [ModPath](/docs/api/utilities/mod-path) - File system path utilities.
    3. [ModScriptParser](/docs/api/utilities/mod-script-parser) - GDScript parsing utilities.
    4. [ModSystemLogger](/docs/api/utilities/mod-system-logger) - Logging utilities.
-   5. [ModZipReader](/docs/api/utilities/mod-zip-reader) - ZIP reading utilities.
+   5. [ModSystemProjectSettings](/docs/api/utilities/mod-system-project-settings) - Project settings utilities.
+   6. [ModZipReader](/docs/api/utilities/mod-zip-reader) - ZIP reading utilities.

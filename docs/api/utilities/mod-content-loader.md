@@ -1,5 +1,5 @@
 ---
-description: 'File system path utilities'
+description: 'Unified resource and file loader'
 ---
 import { SourceLink, GodotClassLink, GodotMethodLink, Property, Class, Params } from '/src/components'
 
