@@ -43,7 +43,7 @@ function SingletonDocLink (props: ApiDocLinkProps) {
 
 function UtilityDocLink (props: ApiDocLinkProps) {
     const { href, ...otherProps } = props
-    return <ApiDocLink href={ `utils/${ href }` } { ...otherProps } />
+    return <ApiDocLink href={ `utilities/${ href }` } { ...otherProps } />
 }
 
 export const Class = {

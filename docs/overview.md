@@ -75,19 +75,19 @@ This is just a quick overview on how to create a mod. For more detail, check out
 
 ## Class Documentation
 
-1. [Singletons](/docs/api/singletons) -  Singletons created when your game starts.
+1. [Singletons](/docs/category/singletons) -  Singletons created when your game starts.
 	1. [ModClassDB](/docs/api/singletons/mod-class-db) - Registers classes to be extensible by mods.
 	2. [ModLoader](/docs/api/singletons/mod-loader) - Handles loading mods from the file system.
 	3. [ModSystem](/docs/api/singletons/mod-system) - Manages mod enabling, disabling, and granting.
-2. [Resources](/docs/api/resources/) - Data and asset classes.
-	1. [ModAsset](/docs/api/resources/mod_asset) - Stores a key and asset pair.
-	2. [ModInstanceScript](/docs/api/resources/mod_instance_script) - Main script run upon granting a mod.
-	3. [ModInstance](/docs/api/resources/mod_instance) - An instance of a mod after it's granted to an in-game object.
-	4. [ModScript](/docs/api/resources/mod_script) - Extension of native GDScript class that registers itself to ModClassDB.
-	5. [ModSettings](/docs/api/resources/mod_settings) - Stores user preferences related to mod management.
+2. [Resources](/docs/category/resources/) - Data and asset classes.
+	1. [ModAsset](/docs/api/resources/mod-asset) - Stores a key and asset pair.
+	2. [ModInstanceScript](/docs/api/resources/mod-instance-script) - Main script run upon granting a mod.
+	3. [ModInstance](/docs/api/resources/mod-instance) - An instance of a mod after it's granted to an in-game object.
+	4. [ModScript](/docs/api/resources/mod-script) - Extension of native GDScript class that registers itself to ModClassDB.
+	5. [ModSettings](/docs/api/resources/mod-settings) - Stores user preferences related to mod management.
 	6. [Mod](/docs/api/resources/mod) - Defines a mod's metadata, assets, and behavior.
-	7. [RegisteredClass](/docs/api/resources/registered_class) - Represents a class registered in ModClassDB.
-3. [Utilities](/docs/api/utilities/) - Utility & library classes.
+	7. [RegisteredClass](/docs/api/resources/registered-class) - Represents a class registered in ModClassDB.
+3. [Utilities](/docs/category/utilities/) - Utility & library classes.
    1. [ModContentLoader](/docs/api/utilities/mod-content-loader) - Content loading utilities.
    2. [ModPath](/docs/api/utilities/mod-path) - File system path utilities.
    3. [ModScriptParser](/docs/api/utilities/mod-script-parser) - GDScript parsing utilities.
