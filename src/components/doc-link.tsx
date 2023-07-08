@@ -58,4 +58,5 @@ export const Class = {
     ModLoader: (props: ApiDocLinkProps) => <SingletonDocLink href='mod-loader' { ...props } cls='ModLoader' />,
     ModSystem: (props: ApiDocLinkProps) => <SingletonDocLink href='mod-system' { ...props } cls='ModSystem' />,
     ModContentLoader: (props: ApiDocLinkProps) => <UtilityDocLink href='mod-content-loader' { ...props } cls='ModContentLoader' />,
+    ModZipReader: (props: ApiDocLinkProps) => <UtilityDocLink href='mod-zip-reader' { ...props } cls='ModZipReader' />,
 }

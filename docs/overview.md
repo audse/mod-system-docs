@@ -87,3 +87,9 @@ This is just a quick overview on how to create a mod. For more detail, check out
 	5. [ModSettings](/docs/api/resources/mod_settings) - Stores user preferences related to mod management.
 	6. [Mod](/docs/api/resources/mod) - Defines a mod's metadata, assets, and behavior.
 	7. [RegisteredClass](/docs/api/resources/registered_class) - Represents a class registered in ModClassDB.
+3. [Utilities](/docs/api/utilities/) - Utility & library classes.
+   1. [ModContentLoader](/docs/api/utilities/mod-content-loader) - Content loading utilities.
+   2. [ModPath](/docs/api/utilities/mod-path) - File system path utilities.
+   3. [ModScriptParser](/docs/api/utilities/mod-script-parser) - GDScript parsing utilities.
+   4. [ModSystemLogger](/docs/api/utilities/mod-system-logger) - Logging utilities.
+   5. [ModZipReader](/docs/api/utilities/mod-zip-reader) - ZIP reading utilities.
