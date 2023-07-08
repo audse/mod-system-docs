@@ -41,6 +41,11 @@ function SingletonDocLink (props: ApiDocLinkProps) {
     return <ApiDocLink href={ `singletons/${ href }` } { ...otherProps } />
 }
 
+function UtilityDocLink (props: ApiDocLinkProps) {
+    const { href, ...otherProps } = props
+    return <ApiDocLink href={ `utils/${ href }` } { ...otherProps } />
+}
+
 export const Class = {
     Mod: (props: ApiDocLinkProps) => <ResourceDocLink href='mod' { ...props } cls='Mod' />,
     ModAsset: (props: ApiDocLinkProps) => <ResourceDocLink href='mod-asset' { ...props } cls='ModAsset' />,
@@ -52,4 +57,5 @@ export const Class = {
     ModClassDB: (props: ApiDocLinkProps) => <SingletonDocLink href='mod-class-db' { ...props } cls='ModClassDB' />,
     ModLoader: (props: ApiDocLinkProps) => <SingletonDocLink href='mod-loader' { ...props } cls='ModLoader' />,
     ModSystem: (props: ApiDocLinkProps) => <SingletonDocLink href='mod-system' { ...props } cls='ModSystem' />,
+    ModContentLoader: (props: ApiDocLinkProps) => <UtilityDocLink href='mod-content-loader' { ...props } cls='ModContentLoader' />,
 }

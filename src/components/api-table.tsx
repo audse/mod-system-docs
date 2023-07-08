@@ -22,23 +22,17 @@ export function Property (props: PropertyProps) {
     const { type, defaultValue, exported, computed, children, ...otherProps } = props
     return (
         <table { ...otherProps }>
-            { type && <tr>
-                <th style={ PropertyHeadStyle }>Type</th>
-                <td style={ PropertyCellStyle }>{ type }</td>
-            </tr> }
-            { defaultValue && <tr>
-                <th style={ PropertyHeadStyle }>Default</th>
-                <td style={ PropertyCellStyle }>{ defaultValue || '-' }</td>
-            </tr> }
-            { children }
-            {/* <tr>
-                <th style={ thStyle }>Is&nbsp;Exported</th>
-                <td style={ tdStyle }>{ exported ? 'Yes' : 'No' }</td>
-            </tr>
-            <tr>
-                <th style={ thStyle }>Is&nbsp;Computed</th>
-                <td style={ tdStyle }>{ computed ? 'Yes' : 'No' }</td>
-            </tr> */}
+            <tbody>
+                { type && <tr>
+                    <th style={ PropertyHeadStyle }>Type</th>
+                    <td style={ PropertyCellStyle }>{ type }</td>
+                </tr> }
+                { defaultValue && <tr>
+                    <th style={ PropertyHeadStyle }>Default</th>
+                    <td style={ PropertyCellStyle }>{ defaultValue || '-' }</td>
+                </tr> }
+                { children }
+            </tbody>
         </table>
     )
 }
@@ -74,12 +68,8 @@ Property.Description = function (props: React.ComponentProps<'tr'>) {
     return <Property.Row th='Description' td={ children } { ...otherProps } />
 }
 
-export type ParamsProps = React.ComponentProps<'table'> & {
-    parameters?: ParamsRowProps[]
-}
-
-export function Params (props: ParamsProps) {
-    const { parameters, children, ...otherProps } = props
+export function Params (props: React.ComponentProps<'table'>) {
+    const { children, ...otherProps } = props
     const thStyle: React.CSSProperties = {
         textAlign: 'left',
     }
@@ -93,7 +83,6 @@ export function Params (props: ParamsProps) {
                 </tr>
             </thead>
             <tbody>
-                { parameters && parameters.map(Params.Row) }
                 { children }
             </tbody>
         </table>

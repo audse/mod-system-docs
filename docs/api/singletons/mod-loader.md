@@ -73,9 +73,10 @@ Loads a mod at the specified `path` and installs it using the <Class.ModSystem m
 **Parameters**
 
 <Params>
-    <Params.Row name='path'
-        description='The file path of the mod to load.'
-        type={ <code>String</code>} />
+    <Params.Row name='path'>
+        <GodotClassLink cls='String' />
+        The file path of the mod to load.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -97,9 +98,10 @@ Recursively searches each listed directory for mods and returns a list of all pa
 **Parameters**
 
 <Params>
-    <Params.Row name='dirs'
-        description='The directories to search for mod paths.'
-        type={ <code>Array[String]</code>} />
+    <Params.Row name='dirs'>
+        <><code>Array</code>[<GodotClassLink cls='String' />]</>
+        The directories to search for mod paths.
+    </Params.Row>
 </Params>
 
 **Returns**

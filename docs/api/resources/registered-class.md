@@ -77,15 +77,18 @@ Initializes a new `RegisteredClass` object with the given [`name`](#name), [`cls
 **Parameters**
 
 <Params>
-    <Params.Row name='name_value' 
-        description='The unique name of the registered class.'
-        type={ <GodotClassLink cls='StringName' /> } />
-    <Params.Row name='cls_value'
-        description='The script class associated with the registered class.'
-        type={ <GodotClassLink cls='Script' /> } />
-    <Params.Row name='parent_value'
-        description='The parent class of the registered class.'
-        type={ <><Class.RegisteredClass />&nbsp;(optional)</> } />
+    <Params.Row name='name_value'>
+        <GodotClassLink cls='StringName' />
+        The unique name of the registered class.
+    </Params.Row>
+    <Params.Row name='cls_value'>
+        <GodotClassLink cls='Script' />
+        The script class associated with the registered class.
+    </Params.Row>
+    <Params.Row name='parent_value'>
+        <><Class.RegisteredClass />&nbsp;(optional)</>
+        The parent class of the registered class.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -103,13 +106,21 @@ Creates a new `RegisteredClass` object by parsing the class name from the `GDScr
 
 **Parameters**
 
-| Name     | Type       | Description                                      |
-| :------- | :--------- | :----------------------------------------------- |
-| `script` | `GDScript` | The `GDScript` instance representing the script. |
+<Params>
+    <Params.Row name='script'>
+        <GodotClassLink cls='GDScript' />
+        The script class to register.
+    </Params.Row>
+</Params>
 
 **Returns**
 
-`RegisteredClass`
+<Property>
+    <Property.Type><code>RegisteredClass</code></Property.Type>
+    <Property.Description>
+        The new <code>RegisteredClass</code>.
+    </Property.Description>
+</Property>
 
 ***
 
@@ -123,11 +134,17 @@ Checks whether the `RegisteredClass` or any of its parent classes is the specifi
 **Parameters**
 
 <Params>
-    <Params.Row name='ancestor' 
-        description='The ancestor class to check.'
-        type={ <Class.RegisteredClass /> } />
+    <Params.Row name='ancestor'>
+        <Class.RegisteredClass />
+        The ancestor class to check.
+    </Params.Row>
 </Params>
 
 **Returns**
 
-`bool`
+<Property>
+    <Property.Type><code>bool</code></Property.Type>
+    <Property.Description>
+        <code>true</code> if this <code>RegisteredClass</code> has the given ancestory.
+    </Property.Description>
+</Property>

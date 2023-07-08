@@ -24,9 +24,10 @@ var mod: Mod
 
 The mod associated with this instance.
 
-<Property 
-    type={ <Class.Mod /> }
-    defaultValue={ <code>null</code> } />
+<Property>
+    <Property.Type><Class.Mod /></Property.Type>
+    <Property.Default><code>null</code> }</Property.Default>
+</Property>
 
 ***
 
@@ -37,9 +38,10 @@ var owner: Object
 
 The object to which the mod is granted.
 
-<Property 
-    type={ <GodotClassLink cls='Object' /> }
-    defaultValue={ <code>null</code> } />
+<Property>
+    <Property.Type><GodotClassLink cls='Object' /></Property.Type>
+    <Property.Default><code>null</code> }</Property.Default>
+</Property>
 
 ***
 
@@ -50,10 +52,10 @@ var instance_script: ModInstanceScript
 
 The script to be run when the mod is granted to the [`owner`](#owner).
 
-<Property 
-    type={ <Class.ModInstanceScript /> }
-    defaultValue={ <code>null</code> } />
-
+<Property>
+    <Property.Type><Class.ModInstanceScript /></Property.Type>
+    <Property.Default><code>null</code> }</Property.Default>
+</Property>
 
 ***
 
@@ -70,10 +72,8 @@ Initializes the mod instance with the associated mod and mod owner. The mod's <C
 
 <Params>
     <Params.Row name='instance_value'>
-        <Params.Row.Type><Class.ModInstance /></Params.Row.Type>
-        <Params.Row.Description>
-            The mod instance associated with this script.
-        </Params.Row.Description>
+        <Class.ModInstance />
+        The mod instance associated with this script.
     </Params.Row>
 </Params>
 

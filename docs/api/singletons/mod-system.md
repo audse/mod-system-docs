@@ -5,7 +5,7 @@ import { SourceLink, GodotClassLink, Property, Class, Params } from '/src/compon
 
 # ModSystem
 
-<SourceLink script='autoload/mod_system.gd' />
+<SourceLink.SeeTheCode script='autoload/mod_system.gd' />
 
 ## Description
 
@@ -27,9 +27,10 @@ This signal is emitted when a mod is installed with the Mod System.
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The installed mod.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The installed mod.
+	</Params.Row>
 </Params>
 
 ***
@@ -44,9 +45,10 @@ This signal is emitted when a mod is uninstalled from the Mod System.
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The uninstalled mod.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The uninstalled mod.
+	</Params.Row>
 </Params>
 
 ***
@@ -61,9 +63,10 @@ This signal is emitted when a mod is enabled.
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The enabled mod.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The enabled mod.
+	</Params.Row>
 </Params>
 
 ***
@@ -78,9 +81,10 @@ This signal is emitted when a mod is disabled.
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The disabled mod.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The disabled mod.
+	</Params.Row>
 </Params>
 
 ***
@@ -95,9 +99,10 @@ This signal is emitted when a mod is granted to an object.
 **Parameters**
 
 <Params>
-    <Params.Row name='instance'
-        description='The granted mod instance.'
-        type={ <Class.ModInstance /> } />
+    <Params.Row name='instance'>
+        <Class.ModInstance />
+        The granted mod instance.
+	</Params.Row>
 </Params>
 
 ***
@@ -112,9 +117,10 @@ This signal is emitted when a mod is revoked from an object.
 **Parameters**
 
 <Params>
-    <Params.Row name='instance'
-        description='The revoked mod instance.'
-        type={ <Class.ModInstance /> } />
+    <Params.Row name='instance'>
+        <Class.ModInstance />
+        The revoked mod instance.
+	</Params.Row>
 </Params>
 
 ***
@@ -167,9 +173,10 @@ This method registers the `mod_owner` object with the <Class.ModClassDB /> and g
 **Parameters**
 
 <Params>
-    <Params.Row name='mod_owner'
-        description='The object to initialize for mods.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object to initialize for mods.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -190,9 +197,10 @@ This method adds the specified mod to the [`installed_mods`](#installed_mods) ar
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to install.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to install.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -213,9 +221,10 @@ This method removes the specified mod from the [`installed_mods`](#installed_mod
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to uninstall.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to uninstall.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -236,9 +245,10 @@ This method enables the specified mod and emits the [`mod_enabled`](#mod_enabled
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to enable.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to enable.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -259,9 +269,10 @@ This method disables the specified mod and emits the [`mod_disabled`](#mod_disab
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to disable.'
-        type={ <Class.Mod /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to disable.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -312,12 +323,14 @@ This method grants the specified mod to the specified mod_owner object and emits
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to grant.'
-        type={ <Class.Mod /> } />
-    <Params.Row name='mod_owner'
-        description='The object in which to grant the mod.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to grant.
+	</Params.Row>
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object in which to grant the mod.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -338,9 +351,10 @@ This method grants all possible mods to the specified mod_owner object and emits
 **Parameters**
 
 <Params>
-    <Params.Row name='mod_owner'
-        description='The object in which to grant the mods.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object in which to grant the mods.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -361,12 +375,14 @@ This method revokes the specified mod from the specified mod_owner object and em
 **Parameters**
 
 <Params>
-    <Params.Row name='mod'
-        description='The mod to revoke.'
-        type={ <Class.Mod /> } />
-    <Params.Row name='mod_owner'
-        description='The object from which to revoke the mod.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod'>
+        <Class.Mod />
+        The mod to revoke.
+	</Params.Row>
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object from which to revoke the mod.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -387,9 +403,10 @@ This method revokes all possible mods from the specified mod_owner object and em
 **Parameters**
 
 <Params>
-    <Params.Row name='mod_owner'
-        description='The object from which to revoke the mods.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object from which to revoke the mods.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -410,9 +427,10 @@ This method searches the `installed_mods` array and returns all mods where the `
 **Parameters**
 
 <Params>
-    <Params.Row name='mod_owner'
-        description='The object for which to retrieve grantable mods.'
-        type={ <GodotClassLink cls='Object' /> } />
+    <Params.Row name='mod_owner'>
+        <GodotClassLink cls='Object' />
+        The object for which to retrieve grantable mods.
+	</Params.Row>
 </Params>
 
 **Returns**
@@ -436,9 +454,10 @@ This method searches the [`installed_mods`](#installed_mods) array and returns t
 **Parameters**
 
 <Params>
-    <Params.Row name='id'
-        description='The ID of the mod to retrieve.'
-        type={ <GodotClassLink cls='String' /> } />
+    <Params.Row name='id'>
+        <GodotClassLink cls='String' />
+        The ID of the mod to retrieve.
+	</Params.Row>
 </Params>
 
 **Returns**

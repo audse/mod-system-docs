@@ -56,16 +56,12 @@ This is a static method that can be called directly on the `ModAsset` class. It 
 
 <Params>
     <Params.Row name='key_value'>
-        <Params.Row.Type><code>String</code></Params.Row.Type>
-        <Params.Row.Description>
-            The identifier for the asset.
-        </Params.Row.Description>
+        <GodotClassLink cls='String' />
+        The identifier for the asset.
     </Params.Row>
     <Params.Row name='asset_value'>
-        <Params.Row.Type><GodotClassLink cls='Resource' /></Params.Row.Type>
-        <Params.Row.Description>
-            The resource associated with the asset.
-        </Params.Row.Description>
+        <GodotClassLink cls='Resource' />
+        The resource associated with the asset.
     </Params.Row>
 </Params>
 

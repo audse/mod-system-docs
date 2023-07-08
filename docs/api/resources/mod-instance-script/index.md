@@ -1,14 +1,17 @@
+---
+description: 'A script associated with a mod instance'
+---
+import { GodotClassLink, SourceLink, Property, Class, Params } from '/src/components'
+
 # ModInstanceScript
 
-<h3>A script associated with a mod instance</h3>
-
-**[See the code at `mod_instance_script.gd`](https://github.com/audse/mod-system/tree/main/addons/mod_system/resources/mod_instance_script.gd)**
+<SourceLink.SeeTheCode script='resources/mod_instance_script.gd' />
 
 ***
 
 ## Description
 
-**Inherits `Resource`**
+**Inherits <GodotClassLink cls='Resource' />**
 
 The `ModInstanceScript` is a script associated with a mod instance in the Mod System. It contains various virtual methods that can be overridden to customize the behavior of the mod when granted to an owner object.
 
@@ -27,7 +30,7 @@ None
 const ButtonBase = preload("mod_instance_script/button.gd")
 ```
 
-A subclass that contains virtual functions specific to `Button`. Extend `ModInstanceScript.ButtonBase` when creating a script for a mod that will be granted to a `Button`.
+A subclass that contains virtual functions specific to <GodotClassLink cls='Button' />. Extend `ModInstanceScript.ButtonBase` when creating a script for a mod that will be granted to a <GodotClassLink cls='Button' />.
 
 ***
 
@@ -36,7 +39,7 @@ A subclass that contains virtual functions specific to `Button`. Extend `ModInst
 const ControlBase = preload("mod_instance_script/control.gd")
 ```
 
-A subclass that contains virtual functions specific to `Control`. Extend `ModInstanceScript.ControlBase` when creating a script for a mod that will be granted to a `Control`.
+A subclass that contains virtual functions specific to <GodotClassLink cls='Control' />. Extend `ModInstanceScript.ControlBase` when creating a script for a mod that will be granted to a <GodotClassLink cls='Control' />.
 
 ***
 
@@ -45,7 +48,7 @@ A subclass that contains virtual functions specific to `Control`. Extend `ModIns
 const NodeBase = preload("mod_instance_script/node.gd")
 ```
 
-A subclass that contains virtual functions specific to `Node`. Extend `ModInstanceScript.NodeBase` when creating a script for a mod that will be granted to a `Node`.
+A subclass that contains virtual functions specific to <GodotClassLink cls='Node' />. Extend `ModInstanceScript.NodeBase` when creating a script for a mod that will be granted to a <GodotClassLink cls='Node' />.
 
 ***
 
@@ -54,7 +57,7 @@ A subclass that contains virtual functions specific to `Node`. Extend `ModInstan
 const ObjectBase = preload("mod_instance_script/object.gd")
 ```
 
-A subclass that contains virtual functions specific to `Object`. Extend `ModInstanceScript.ObjectBase` when creating a script for a mod that will be granted to a `Object`.
+A subclass that contains virtual functions specific to <GodotClassLink cls='Object' />. Extend `ModInstanceScript.ObjectBase` when creating a script for a mod that will be granted to a <GodotClassLink cls='Object' />.
 
 ***
 
@@ -63,7 +66,7 @@ A subclass that contains virtual functions specific to `Object`. Extend `ModInst
 const ResourceBase = preload("mod_instance_script/resource.gd")
 ```
 
-A subclass that contains virtual functions specific to `Resource`. Extend `ModInstanceScript.ResourceBase` when creating a script for a mod that will be granted to a `Resource`.
+A subclass that contains virtual functions specific to <GodotClassLink cls='Resource' />. Extend `ModInstanceScript.ResourceBase` when creating a script for a mod that will be granted to a <GodotClassLink cls='Resource' />.
 
 ***
 

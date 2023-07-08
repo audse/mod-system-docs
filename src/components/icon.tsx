@@ -9,9 +9,8 @@ export default function Icon (props: IconProps) {
         <span
             role='img'
             style={ {
-                mask: `url("/img/${ props.name }.svg")`,
-                // @ts-ignore
-                webkitMaskImage: `url("/img/${ props.name }.svg")`,
+                mask: `url("/mod-system-docs/img/${ props.name }.svg")`,
+                WebkitMaskImage: `url("/mod-system-docs/img/${ props.name }.svg")`,
                 width: '0.9em',
                 height: '0.9em',
                 background: 'currentColor',

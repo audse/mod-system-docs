@@ -9,7 +9,7 @@ import { SourceLink, GodotClassLink, Property, Class, Params } from '/src/compon
 
 ## Description
 
-**Inherits `Resource`**
+**Inherits <GodotClassLink cls='Resource' />**
 
 The `Mod` class represents a mod in the Mod System. It extends the `Resource` class and provides metadata, assets, and functionality for granting and revoking the mod to/from game objects.
 
@@ -67,9 +67,12 @@ This signal is emitted when the mod is granted to an object.
 
 **Parameters**
 
-| Name       | Type                         | Description               |
-| :--------- | :--------------------------- | :------------------------ |
-| `instance` | [`ModInstance`](ModInstance) | The granted mod instance. |
+<Params>
+    <Params.Row>
+        <Class.ModInstance />
+        The granted mod instance.
+    </Params.Row>
+</Params>
 
 ***
 
@@ -82,9 +85,12 @@ This signal is emitted when the mod is revoked from an object.
 
 **Parameters**
 
-| Name       | Type                         | Description               |
-| :--------- | :--------------------------- | :------------------------ |
-| `instance` | [`ModInstance`](ModInstance) | The revoked mod instance. |
+<Params>
+    <Params.Row>
+        <Class.ModInstance />
+        The revoked mod instance.
+    </Params.Row>
+</Params>
 
 ***
 
@@ -97,9 +103,10 @@ var requires_restart: bool
 
 A flag indicating whether the mod requires a game restart to take effect.
 
-**Type**
-
-`bool`
+<Property>
+    <Property.Type><code>bool</code></Property.Type>
+    <Property.Default><code>false</code></Property.Default>
+</Property>
 
 ***
 
@@ -110,9 +117,11 @@ var is_cheat: bool
 
 A flag indicating whether the mod provides cheats or cheat-like functionality.
 
-**Type**
+<Property>
+    <Property.Type><code>bool</code></Property.Type>
+    <Property.Default><code>false</code></Property.Default>
+</Property>
 
-`bool`
 
 ***
 
@@ -123,9 +132,11 @@ var grantable_owners: PackedStringArray
 
 An array of registered class names that can receive this mod.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='PackedStringArray' /></Property.Type>
+    <Property.Default><code>PackedStringArray([])</code></Property.Default>
+</Property>
 
-`PackedStringArray`
 
 ***
 
@@ -136,9 +147,10 @@ var instance_script: ModScript
 
 The script to be run when the mod is granted to an object.
 
-**Type**
-
-[`ModScript`](ModScript)
+<Property>
+    <Property.Type><Class.ModScript /></Property.Type>
+    <Property.Default><code>null</code></Property.Default>
+</Property>
 
 ***
 
@@ -149,9 +161,12 @@ var assets: Array[ModAsset]
 
 An array of mod assets associated with the mod.
 
-**Type**
-
-`Array`[[`ModAsset`](ModAsset)]
+<Property>
+    <Property.Type>
+        <GodotClassLink cls='Array' />[<Class.ModAsset />]
+    </Property.Type>
+    <Property.Default><code>[]</code></Property.Default>
+</Property>
 
 ***
 
@@ -162,9 +177,11 @@ var name: String
 
 The name of the mod.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='String' /></Property.Type>
+    <Property.Default />
+</Property>
 
-`String`
 
 ***
 
@@ -175,9 +192,11 @@ var author: String
 
 The author of the mod.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='String' /></Property.Type>
+    <Property.Default />
+</Property>
 
-`String`
 
 ***
 
@@ -188,9 +207,11 @@ var version: String
 
 The version of the mod.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='String' /></Property.Type>
+    <Property.Default />
+</Property>
 
-`String`
 
 ***
 
@@ -201,9 +222,11 @@ var url: String
 
 The URL where the mod can be downloaded or accessed.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='String' /></Property.Type>
+    <Property.Default />
+</Property>
 
-`String`
 
 ***
 
@@ -214,9 +237,11 @@ var thumbnail: Texture2D
 
 A thumbnail image representing the mod.
 
-**Type**
+<Property>
+    <Property.Type><GodotClassLink cls='Texture2D' /></Property.Type>
+    <Property.Default><code>null</code></Property.Default>
+</Property>
 
-`Texture2D`
 
 ***
 
@@ -227,22 +252,26 @@ var instances: Dictionary[Object, ModInstance]
 
 A dictionary that maps objects to their corresponding mod instances.
 
-**Type**
-
-`Dictionary`[`Object`, [`ModInstance`](ModInstance)]
+<Property>
+    <Property.Type>
+        <GodotClassLink cls='Dictionary' />[<GodotClassLink cls='Object' />, <Class.ModInstance />]
+    </Property.Type>
+    <Property.Default><code>{ '{}' }</code></Property.Default>
+</Property>
 
 ***
 
 ### is_enabled
 ```gdscript
-var is_enabled: bool # computed
+var is_enabled: bool setget
 ```
 
-A computed property indicating whether the mod is currently enabled.
+A **computed property** indicating whether this mod is currently enabled.
 
-**Type**
-
-`bool`
+<Property>
+    <Property.Type><code>bool</code></Property.Type>
+    <Property.Default />
+</Property>
 
 ***
 
@@ -257,9 +286,13 @@ Grants the mod to the specified object. This method creates a mod instance for t
 
 **Parameters**
 
-| Name    | Type     | Description                     |
-| :------ | :------- | :------------------------------ |
-| `owner` | `Object` | The object to grant the mod to. |
+<Params>
+    <Params.Row name='owner'>
+        <GodotClassLink cls='Object' />
+        The object to grant the mod to.
+    </Params.Row>
+</Params>
+
 
 **Returns** 
 
@@ -276,9 +309,13 @@ Revokes the mod from the specified object. This method removes the mod instance 
 
 **Parameters**
 
-| Name    | Type     | Description                        |
-| :------ | :------- | :--------------------------------- |
-| `owner` | `Object` | The object to revoke the mod from. |
+<Params>
+    <Params.Row>
+        <GodotClassLink cls='Object' />
+        The object to revoke the mod from.
+    </Params.Row>
+</Params>
+
 
 **Returns** 
 
@@ -295,16 +332,19 @@ Retrieves the mod instance associated with the specified object. If no instance 
 
 **Parameters**
 
-| Name    | Type     | Description                                  |
-| :------ | :------- | :------------------------------------------- |
-| `owner` | `Object` | The object to retrieve the mod instance for. |
-
+<Params>
+    <Params.Row name='owner'>
+        <GodotClassLink cls='Object' />
+        The object to retrieve the mod instance for.
+    </Params.Row>
+</Params>
 
 **Returns** 
 
-| Type                         | Description                                                                   |
-| :--------------------------- | :---------------------------------------------------------------------------- |
-| [`ModInstance`](ModInstance) | The mod instance associated with the object, or `null` if no instance exists. |
+<Property>
+    <Property.Type><Class.ModInstance /></Property.Type>
+    <Property.Description>TThe mod instance associated with the object, or <code>null</code> if no instance exists.</Property.Description>
+</Property>
 
 ***
 
@@ -317,13 +357,19 @@ Retrieves a mod asset by its key. This method searches the [`assets`](#assets) a
 
 **Parameters**
 
-| Name  | Type     | Description                       |
-| :---- | :------- | :-------------------------------- |
-| `key` | `String` | The key of the asset to retrieve. |
+<Params>
+    <Params.Row name='key'>
+        <GodotClassLink cls='String' />
+        The key of the asset to retrieve.
+    </Params.Row>
+</Params>
 
 **Returns** 
 
-[`ModAsset`](ModAsset) - The mod asset with the specified key, or `null` if not found.
+<Property>
+    <Property.Type><Class.ModAsset /></Property.Type>
+    <Property.Description>The mod asset with the specified key, or <code>null</code> if not found.</Property.Description>
+</Property>
 
 ***
 
@@ -396,4 +442,7 @@ Retrieves the unique identifier of the mod. This method returns a unique identif
 
 **Returns** 
 
-`String` - The mod's unique identifier.
+<Property>
+    <Property.Type><GodotClassLink cls='String' /></Property.Type>
+    <Property.Description>The mod's unique identifier.</Property.Description>
+</Property>

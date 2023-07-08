@@ -112,8 +112,8 @@ Returns `true` if the specified mod is enabled (included in the [`enabled_mods`]
 
 <Params>
     <Params.Row name='mod'>
-        <Params.Row.Type><Class.Mod /></Params.Row.Type>
-        <Params.Row.Description>The mod to check.</Params.Row.Description>
+        <Class.Mod />
+        The mod to check.
     </Params.Row>
 </Params>
 
@@ -134,8 +134,8 @@ Returns `true` if the specified mod can be enabled. This depends on the current 
 
 <Params>
     <Params.Row name='mod'>
-        <Params.Row.Type><Class.Mod /></Params.Row.Type>
-        <Params.Row.Description>The mod to check.</Params.Row.Description>
+        <Class.Mod />
+        The mod to check.
     </Params.Row>
 </Params>
 
@@ -156,8 +156,8 @@ Returns `true` if the specified mod can be disabled. This depends on whether the
 
 <Params>
     <Params.Row name='mod'>
-        <Params.Row.Type><Class.Mod /></Params.Row.Type>
-        <Params.Row.Description>The mod to check.</Params.Row.Description>
+        <Class.Mod />
+        The mod to check.
     </Params.Row>
 </Params>
 
@@ -178,8 +178,8 @@ Enables the specified mod and saves the settings.
 
 <Params>
     <Params.Row name='mod'>
-        <Params.Row.Type><Class.Mod /></Params.Row.Type>
-        <Params.Row.Description>The mod to enable.</Params.Row.Description>
+        <Class.Mod />
+        The mod to enable.
     </Params.Row>
 </Params>
 
@@ -201,8 +201,8 @@ Disables the specified mod and saves the settings.
 
 <Params>
     <Params.Row name='mod'>
-        <Params.Row.Type><Class.Mod /></Params.Row.Type>
-        <Params.Row.Description>The mod to disable.</Params.Row.Description>
+        <Class.Mod />
+        The mod to disable.
     </Params.Row>
 </Params>
 

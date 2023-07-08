@@ -31,9 +31,10 @@ This signal is emitted when a class is registered to `ModClassDB`.
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The just-registered class.'
-        type={ <Class.RegisteredClass /> } />
+    <Params.Row name='cls'>
+        <Class.RegisteredClass />
+        The just-registered class.
+    </Params.Row>
 </Params>
 
 ***
@@ -48,9 +49,10 @@ This signal is emitted when a class is unregistered from `ModClassDB`.
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The just-unregistered class.'
-        type={ <Class.RegisteredClass /> } />
+    <Params.Row name='cls'>
+        <Class.RegisteredClass />
+        The just-unregistered class.
+    </Params.Row>
 </Params>
 
 ---
@@ -89,9 +91,10 @@ This method creates a <Class.RegisteredClass /> object for the class and adds it
 **Parameters**
 
 <Params>
-    <Params.Row name='script'
-        description='The script of the class to register.'
-        type={ <GodotClassLink cls='GDScript' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='GDscript' />
+        The script of the class to register.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -118,14 +121,14 @@ This method creates a <Class.RegisteredClass /> object for the class and adds it
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description={<>
-            The name to use when registering the class. See <Class.RegisteredClass property='name' />.
-        </>}
-        type={ <GodotClassLink cls='StringName' /> } />
-    <Params.Row name='script'
-        description='The script of the class to register.'
-        type={ <GodotClassLink cls='Script' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='StringName' />
+        <>The name to use when registering the class. See <Class.RegisteredClass property='name' />.</>
+    </Params.Row>
+    <Params.Row name='script'>
+        <GodotClassLink cls='GDscript' />
+        The script of the class to register.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -154,9 +157,10 @@ This method removes the corresponding [`RegisteredClass`](#) object from the [`r
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The name of the class to unregister.'
-        type={ <GodotClassLink cls='StringName' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='StringName' />
+        The name of the class to unregister.
+    </Params.Row>
 </Params>
 
 ***
@@ -174,9 +178,10 @@ This method searches the [`registered_classes`](#registered_classes) array for a
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The name of the class to check.'
-        type={ <GodotClassLink cls='StringName' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='StringName' />
+        The name of the class to check.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -205,9 +210,10 @@ This method searches the [`registered_classes`](#registered_classes) array for a
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The script to check.'
-        type={ <GodotClassLink cls='Script' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='Script' />
+        The script to check.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -236,9 +242,10 @@ This method searches the [`registered_classes`](#registered_classes) array for a
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The name of the class to register.'
-        type={ <GodotClassLink cls='StringName' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='StringName' />
+        The name of the class to retrieve.
+    </Params.Row>
 </Params>
 
 **Returns**
@@ -267,9 +274,10 @@ This method searches the [`registered_classes`](#registered_classes) array for a
 **Parameters**
 
 <Params>
-    <Params.Row name='cls'
-        description='The script to retrieve.'
-        type={ <GodotClassLink cls='Script' /> } />
+    <Params.Row name='cls'>
+        <GodotClassLink cls='Script' />
+        The script to retrieve.
+    </Params.Row>
 </Params>
 
 **Returns**
